@@ -8,20 +8,22 @@ const Sidebar = () => {
   return (
     <div className='hidden sm:flex flex-col p-2 xl:items-start fixed h-full'>
         {/* Twitter Logo */}
-        <div className='hoverEffect'>
+        <div className='hoverEffect p-0 hover:bg-blue-100 xl:px-1'>
             <Image width="50" height="50" src="https://help.twitter.com/content/dam/help-twitter/brand/logo.png"></Image>
         </div>
 
         {/* Menu */}
 
-        <SidebarMenuItem text="Home" Icon={HomeIcon} active/>
-        <SidebarMenuItem text="Explore" Icon={HashtagIcon}/>
-        <SidebarMenuItem text="Notifications" Icon={BellIcon}/>
-        <SidebarMenuItem text="Messages" Icon={InboxIcon}/>
-        <SidebarMenuItem text="Bookmarks" Icon={BookmarkIcon}/>
-        <SidebarMenuItem text="Lists" Icon={ClipboardIcon}/>
-        <SidebarMenuItem text="Profile" Icon={UserIcon}/>
-        <SidebarMenuItem text="More" Icon={DotsCircleHorizontalIcon}/>
+        <div className='mt-4 mb-2.5 xl:items-start'>
+            <SidebarMenuItem text="Home" Icon={HomeIcon} active/>
+            <SidebarMenuItem text="Explore" Icon={HashtagIcon}/>
+            <SidebarMenuItem text="Notifications" Icon={BellIcon}/>
+            <SidebarMenuItem text="Messages" Icon={InboxIcon}/>
+            <SidebarMenuItem text="Bookmarks" Icon={BookmarkIcon}/>
+            <SidebarMenuItem text="Lists" Icon={ClipboardIcon}/>
+            <SidebarMenuItem text="Profile" Icon={UserIcon}/>
+            <SidebarMenuItem text="More" Icon={DotsCircleHorizontalIcon}/>
+        </div>
 
         {/* Button */}
 
@@ -34,11 +36,11 @@ const Sidebar = () => {
             src='https://api.acadium.com/u/4rd4ljxl5/100002456113' alt='user-image' 
             className='h-10 w-10 rounded-full xl:mr-2'
             />
-            <div className=''>
+            <div className='leading-5 hidden xl:inline'>
                 <h4 className='font-bold'>Elijah Adah</h4>
                 <p className='text-gray-500'>@rextic_dev</p>
             </div>
-            <DotsHorizontalIcon className='h-5 xl:ml-8'/>
+            <DotsHorizontalIcon className='h-5 xl:ml-8 hidden xl:inline'/>
         </div>
     </div>
   )
